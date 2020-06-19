@@ -12,6 +12,11 @@
         </div>
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <script>
+            // appHeader에서 appContent로 이벤트 전달 순서
+            // 1. appContent pass 이벤트 $emit으로 deliverNum 이벤트 root로 전달
+            // 2. app-content @pass="deliverNUm" 으로
+            // 3. root 에서 deliverNum 전달 받음
+            // 4. appHeader에서 props 로 전달 받음
             var appHeader = {
                 template: '<div>header</div>',
                 props: ['propsdata'],
